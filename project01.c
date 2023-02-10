@@ -32,3 +32,10 @@ void sha256(char *dest, char *src) {
         dest += 2;
     }
 }
+
+int main(int argc, char *argv[]) {
+    char dig_str[DIG_STR_LEN];
+    
+    sha256(dig_str, argv[1]);
+    printf("%s\n", dig_str);
+}
